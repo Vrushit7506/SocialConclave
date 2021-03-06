@@ -148,46 +148,45 @@
                 </div>
             </div>
 
-            <div class="multisteps-form__panel js-active" data-animation="scaleIn">
-                <div class="container" id="form">
+            <div class="multisteps-form__panel js-active container" data-animation="scaleIn">
                     <form method="POST">
                         {% csrf_token %}
                         {{form|crispy}}
+                        <div style="margin-bottom:10px;">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                        
                     </form>
-                </div>
             </div>
-
             <div class="multisteps-form__panel" data-animation="scaleIn">
                 Part 2
             </div>
-
             <div class="multisteps-form__panel" data-animation="scaleIn">
                 Part 3
             </div>
-
         </div>
     </div>
 
     <script>
-        var exp = document.getElementById("dh");
-        exp.style.display = "none";
-        var team = document.getElementById("team");
-        team.style.display = "none";
+        // var exp = document.getElementById("dh");
+        // exp.style.display = "none";
+        // var team = document.getElementById("team");
+        // team.style.display = "none";
 
-        function f(i) {
-            if (i == 1) {
-                exp.style.display = "block";
-            } else if (i == 2) {
-                exp.style.display = "none";
-            } else if (i == 3) {
-                team.style.display = "block";
-            } else {
-                team.style.display = "none";
-            }
+        // function f(i) {
+        //     if (i == 1) {
+        //         exp.style.display = "block";
+        //     } else if (i == 2) {
+        //         exp.style.display = "none";
+        //     } else if (i == 3) {
+        //         team.style.display = "block";
+        //     } else {
+        //         team.style.display = "none";
+        //     }
 
-        }
+        // }
     </script>
-    <script src="{% static 'js/register-script.js' %}"></script>
+    
 </body>
 
 </html>
