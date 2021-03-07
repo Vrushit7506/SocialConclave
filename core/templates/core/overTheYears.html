@@ -98,8 +98,8 @@
     <section id="services" class="s-services">
         <div class="provide" id="teamsId">
             <div class="header">
-                <span>Over The Years</span>
-                <h2>Team Conclave 2020</h2>
+                <span>Our Team</span>
+                <h2>Super Core Conclave 2020</h2>
                 <p>
                     We at Conclave believe in doing our bit to bring about a big change one problem at a time
                 </p>
@@ -230,44 +230,72 @@
                             </div>
                         </div>
                     </div>
-                    <div class="core">
-                        <div class="dept-box">
-                            <div class="ribbon"></div>
-                            <div class="dept">
-                                <h1 class="deptName">RESEARCH &amp;<br> DEVELOPMENT</h1>
-                                <h1 class="deptPost">HEAD</h1>
-                                <h1 class="deptNames">Abhishek Doppalapudi<br>Avi Sogani</h1>
-                                <h1 class="deptPost">SUB HEAD</h1>
-                                <h1 class="deptNames">Varun Gupta <br>Avani Lakhe</h1>
-                            </div>
-                        </div>
-                        <div class="dept-box">
-                            <div class="ribbon"></div>
-                            <div class="dept">
-                                <h1 class="deptName">RESEARCH &amp;<br> DEVELOPMENT</h1>
-                                <h1 class="deptPost">HEAD</h1>
-                                <h1 class="deptNames">Abhishek Doppalapudi<br>Avi Sogani</h1>
-                                <h1 class="deptPost">SUB HEAD</h1>
-                                <h1 class="deptNames">Varun Gupta <br>Avani Lakhe</h1>
-                            </div>
-                        </div>
-                        <div class="dept-box">
-                            <div class="ribbon"></div>
-                            <div class="dept">
-                                <h1 class="deptName">RESEARCH &amp;<br> DEVELOPMENT</h1>
-                                <h1 class="deptPost">HEAD</h1>
-                                <h1 class="deptNames">Abhishek Doppalapudi<br>Avi Sogani</h1>
-                                <h1 class="deptPost">SUB HEAD</h1>
-                                <h1 class="deptNames">Varun Gupta <br>Avani Lakhe</h1>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
         </div>
     </section>
+
+
+    <section id="services" class="s-services">
+        <div class="provide" id="teamsId">
+            <div class="header">
+                <span>Over Team</span>
+                <h2>Core Conclave 2020</h2>
+                <p>
+                    We at Conclave believe in doing our bit to bring about a big change one problem at a time
+                </p>
+            </div>
+
+            <section class="gridAbout">
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Explore">
+                        <img src="{% static 'images/Skills - 1.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Abhishek Doppalapudi<br>Avi Sogani</h3>
+                        <span>Sub Head</span>
+                        <h3>Varun Gupta <br>Avani Lakhe</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Explore">
+                        <img src="{% static 'images/Skills - 1.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Abhishek Doppalapudi<br>Avi Sogani</h3>
+                        <span>Sub Head</span>
+                        <h3>Varun Gupta <br>Avani Lakhe</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Explore">
+                        <img src="{% static 'images/Skills - 1.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Abhishek Doppalapudi<br>Avi Sogani</h3>
+                        <span>Sub Head</span>
+                        <h3>Varun Gupta <br>Avani Lakhe</h3>
+                    </div>
+                </div>
+                <div class="card" onclick="CardClick(this)">
+                    <div class="imgBox" data-text="Explore">
+                        <img src="{% static 'images/Skills - 1.png' %}" alt="" />
+                    </div>
+                    <div class="content">
+                        <span>Head</span>
+                        <h3>Abhishek Doppalapudi<br>Avi Sogani</h3>
+                        <span>Sub Head</span>
+                        <h3>Varun Gupta <br>Avani Lakhe</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
 
     <!--  -->
 
@@ -363,6 +391,17 @@
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
     <script src="{% static 'js/320-js-main.js' %}"></script>
+
+    <script>
+        function CardClick(thisCard) {
+            allcards = document.getElementsByClassName("card");
+            for (let i = 0; i < allcards.length; i++) {
+                allcards[i].classList.remove("active");
+            }
+            thisCard.classList.add("active");
+        }
+
+    </script>
 </body>
 
 </html>
