@@ -193,7 +193,7 @@
                     <h3 class="h2">Brand Identity</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
                         est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit
-                        voluptas ipsa in tempora esse soluta sint.
+                        voluptas ipsa in tempora esse soluta sint.... <a href="">Read More</a>
                     </p>
                 </div>
             </div>
@@ -437,7 +437,7 @@
         <div class="row contact-content" data-aos="fade-up">
             <div class="contact-primary">
                 <h3 class="h6">Send Us A Message</h3>
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                <form name="submit-to-google-sheet" id="contactForm" method="post">
                     <fieldset>
                         <div class="form-field">
                             <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
@@ -456,7 +456,8 @@
                                 cols="50" required="" aria-required="true" class="full-width"></textarea>
                         </div>
                         <div class="form-field">
-                            <button class="full-width btn--primary">Submit</button>
+                            <button id="contactForm" class="full-width btn--primary" onclick="submittosheet()"
+                                type="submit">Submit</button>
                             <div class="submit-loader">
                                 <div class="text-loader">Sending...</div>
                                 <div class="s-loader">
@@ -647,6 +648,20 @@
                 $(".service-text").addClass("animmovedown");
             }
         });
+    </script>
+
+
+    <script>
+        function submittosheet() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyYc2dcIQfx8NIhAmwi3yTPrNzoyVgS-7oJxRPGyZ1tZOr5L7WRYSl-uMaBMnm-X_tc/exec';
+            const form = document.forms['submit-to-google-sheet'];
+
+            form.addEventListener('submit', e => {
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+            });
+        }
     </script>
 
 

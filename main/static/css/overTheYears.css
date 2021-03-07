@@ -245,11 +245,11 @@
 .gridAbout .card .imgBox:before {
   content: attr(data-text);
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 6em;
+  font-size: 3em;
   color: rgba(255, 255, 255, 0.2);
   font-weight: 700;
 }
